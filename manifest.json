@@ -1,0 +1,25 @@
+{
+  "manifest_version": 2,
+  "name": "Me on Page",
+  "version": "1.0.0",
+
+  "browser_action": {
+    "default_title": "Me on Page"
+  },
+
+  "icons": { "128": "icon128.png"},
+
+  "background": {
+    "scripts": ["background.js"]
+  },
+
+  "permissions": ["activeTab"],
+
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "css": ["content.css"],
+      "js": ["jquery-3.4.1.min.js", "p5.min.js", "p5.dom.min.js", "ml5.min.js", "content.js"]
+    }
+  ]
+}
